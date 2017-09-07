@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## CSS Playground
 
-You can use the [editor on GitHub](https://github.com/NLDev/CSS-Playground/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+**A repository to test my CSS skills**
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This is basically a collection of my CSS showcases. <br>
+I'm doing this on github since <a href="https://codepen.io">CodePen</a> is so *2012*.
 
-### Markdown
+For a prettier list go here: <br>
+https://nldev.github.io/CSS-Playground
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# List:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NLDev/CSS-Playground/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+| » Name « | » Description « | » Live Version « | » Code « |
+|----------|-----------------|------------------|----------|
+| Earth | A pure CSS Earth | <a href="https://nldev.github.io/CSS-Playground/earth/">Click Me</a> | <a href="https://github.com/NLDev/CSS-Playground/tree/master/earth">Click Me</a> |
