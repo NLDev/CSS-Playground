@@ -8,7 +8,7 @@ I'm doing this on github since <a href="https://codepen.io">CodePen</a> is so *2
 For a prettier list go here: <br>
 https://nldev.github.io/CSS-Playground
 
-# List:
+### List:
 
 | » Name « | » Description « | » Live Version « | » Code « |
 |----------|-----------------|------------------|----------|
