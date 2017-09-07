@@ -31,11 +31,33 @@ body {
 	margin-left:                  auto; 
 	margin-right:                 auto; 
 	width:                        300px;
+	color:                        #FFF;
+	text-align:                   center;
+}
+
+.title p {
 	font-size:                    35px;
-	padding-left:                 1em;
 	background:                   -webkit-linear-gradient(#eee, #333);
 	-webkit-background-clip:      text;
 	-webkit-text-fill-color:      transparent;
+}
+
+.title a {
+	margin-top:                   -.5em;
+	font-size:                    15px;                  
+}
+
+.title a[href] {
+	color:                        red;
+	text-decoration:              none;
+	font-style:                   normal;
+}
+
+.title a[href]:hover {
+	color:                        #FFF;
+	text-decoration:              none;
+	font-style:                   normal;
+	cursor:                       pointer;
 }
 
 .stars {
@@ -82,7 +104,7 @@ body {
 	position:                     relative;
 	width:                        300px;
 	height:                       300px;
-	margin:                       10em auto;
+	margin:                       11em auto;
 	background:                   #04709E 0 0 repeat;
 	border-radius:                50%;
 	-moz-border-radius:           50%;
