@@ -67,15 +67,15 @@ body {
 		260px  481px #FFF, 840px  441px #FFF, 
 		1040px 341px #FFF, 1000px 541px #FFF, 
 		90px   388px #FFF, 208px  244px #FFF, 
-		663px  535px #FFF, 283px  585px #FFF,
-		635px  557px #FFF, 410px  185px #FFF,
-		910px  145px #FFF;
+		283px  585px #FFF, 635px  600px #FFF, 
+		410px  185px #FFF, 910px  145px #FFF;
 }
 
 .earth-inner {
 	position:                     absolute;
 	height:                       800px;
-	margin-left:                  -15em;
+	margin-left:                  -21em;
+	margin-top:                   -7em;
 	width:                        800px;
 	background-color:             green;
 	-webkit-clip-path: polygon(
@@ -86,17 +86,12 @@ body {
 		457px 273px, 482px 287px, 492px 298px, 481px 309px,
 		505px 307px, 495px 320px, 506px 334px, 493px 362px,
 		522px 398px, 540px 389px, 543px 417px, 639px 420px,
-		648px 399px, 673px 383px, 668px 352px, 689px 341px,
-		677px 320px, 642px 322px, 636px 308px, 607px 309px,
 		582px 292px, 560px 297px, 540px 291px, 511px 291px,
 		497px 270px, 484px 245px, 478px 264px, 465px 259px,
 		456px 245px, 439px 237px, 432px 221px, 429px 208px,
 		444px 185px, 450px 177px, 485px 175px, 505px 183px,
-		510px 198px, 525px 209px, 540px 207px, 536px 194px,
-		538px 180px, 558px 150px, 568px 137px, 563px 124px,
-		580px 110px, 563px 100px, 561px 82px,  538px 71px,
-		536px 92px,  520px 99px,  537px 123px, 519px 120px,
-		492px 107px, 474px 77px,  469px 57px,  449px 36px, 401px 31px
+		510px 198px, 525px 209px, 540px 207px, 538px 180px, 
+		558px 150px, 568px 137px, 536px 92px,  401px 31px
 	);
 }
 
@@ -104,7 +99,7 @@ body {
 	position:                     relative;
 	width:                        300px;
 	height:                       300px;
-	margin:                       11em auto;
+	margin:                       15em auto;
 	background:                   #04709E 0 0 repeat;
 	border-radius:                50%;
 	-moz-border-radius:           50%;
@@ -155,4 +150,19 @@ body {
 	-o-border-radius:             50%;
 	opacity:                      0.2;
 	background:                   radial-gradient(circle at 100px 100px, #FFF, #000);
+}
+
+.shine {
+	display:                      block;
+	height:                       300px;
+	width:                        300px;
+	border-radius:                100%;
+	box-shadow:                   0 0 50px #04709E, 0 0 150px #FFF;
+	-moz-box-shadow:              0 0 50px #04709E, 0 0 150px #FFF;
+	-webkit-box-shadow:           0 0 50px #04709E, 0 0 150px #FFF;
+	position:                     absolute;
+	top:                          0;
+	margin:                       15em 0;
+	left:                         50%;
+  	transform:                    translateX(-50%);
 }
