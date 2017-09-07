@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
-* { overflow:                     hidden; }
+/* * * * * * * * * * * * * * * * * * 
+ * Copyright (c) 2016-2017 NullDev *
+ * * * * * * * * * * * * * * * * * */
+
+* {
+	overflow:                     hidden;
+	font-family:                  'Raleway', sans-serif;
+}
 
 *, :before, :after {
 	-moz-box-sizing:              border-box;
@@ -157,9 +165,23 @@ body {
 	height:                       300px;
 	width:                        300px;
 	border-radius:                100%;
+
+	/*
+	box-shadow:                   0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
+	-moz-box-shadow:              0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
+	-webkit-box-shadow:           0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
+	*/
+
+	/*
 	box-shadow:                   0 0 50px #04709E, 0 0 150px #FFF;
 	-moz-box-shadow:              0 0 50px #04709E, 0 0 150px #FFF;
 	-webkit-box-shadow:           0 0 50px #04709E, 0 0 150px #FFF;
+	*/
+
+	box-shadow:                   0 0 50px #04709E, 0 0 150px #FFF, 0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
+	-moz-box-shadow:              0 0 50px #04709E, 0 0 150px #FFF, 0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
+	-webkit-box-shadow:           0 0 50px #04709E, 0 0 150px #FFF, 0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
+
 	position:                     absolute;
 	top:                          0;
 	margin:                       15em 0;
