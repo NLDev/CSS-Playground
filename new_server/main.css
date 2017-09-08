@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* * * * * * * * * * * * * * * * 
+ * Copyright (c) 2017 NullDev. *
+ * * * * * * * * * * * * * * * */
+
+*, html, body { font-family:   'Lato', sans-serif; }
+
+html {
+	background-image:          url(https://nulldev.org/img/bg-1.png);
+	background-attachment:     fixed;
+	background-color:          rgba(0, 2, 2, 1);
+	background-position:       center bottom;
+	background-repeat:         no-repeat;
+	height:                    100%;
+	overflow:                  auto;
+}
+
+body {
+	-webkit-font-smoothing:    antialiased;
+	font-size:                 85%;
+	margin-top:                0;
+}
+
+h1 {
+	font-size:                 200%;
+	font-weight:               400;
+	margin-bottom:             .77em;
+	margin-top:                .88em;
+	opacity:                   .8;
+}
+
+p {
+	line-height:               1.5;
+	margin:                    .588em 0;
+	text-align:                start;
+	opacity:                   .8;
+}
+
+a       { color:               rgb(51, 103, 214); }
+a:hover { text-decoration:     underline;         }
+
+.learn-more-button {
+	color:                     rgb(123, 170, 247);
+	display:                   inline-block;
+	font-size:                 92.8%;
+	font-weight:               500;
+	margin-top:                1.98em;
+	padding:                   10.5px 12px;
+	text-decoration:           none;
+	text-transform:            uppercase;
+}
+
+.content {
+	box-sizing:                border-box;
+	margin:                    7.5em auto 7.5em;
+	max-width:                 480px;
+	min-width:                 240px;
+	padding:                   30px 35px;
+	background-color:          #323232;
+	color:                     white;
+	text-align:                center;
+}
+
+.icon {
+	content:                   url(https://nulldev.org/img/logo.png);
+	display:                   inline-block;
+	height:                    120px;
+	width:                     120px;
+}
+
+html .content {
+	border-radius:             2px;
+	box-shadow:                0 4px 6px 1px rgba(0, 0, 0, 0.4);
+}
+
+.content > span { display:     block; }
+
+@media (max-width:700px) {     body { margin: 1em 2em 2em; } }
+
+@media (max-width:400px) {
+	body     { margin:         3em 1.5em 2em; }
+	.content { padding:        16px 8px;      }
+}
+
+@media (max-height:480px) and (max-width:400px) { .content { margin: auto; } }
