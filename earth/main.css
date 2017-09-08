@@ -156,26 +156,12 @@ body {
 	height:                       300px;
 	width:                        300px;
 	border-radius:                100%;
-
 	box-shadow:                   0 0 10px #04709E, 20px -15px 40px -5px #8acdea;
 	-moz-box-shadow:              0 0 10px #04709E, 20px -15px 40px -5px #8acdea;
 	-webkit-box-shadow:           0 0 10px #04709E, 20px -15px 40px -5px #8acdea;
-	
-	/*
-	box-shadow:                   0 0 50px #04709E, 0 0 150px #FFF;
-	-moz-box-shadow:              0 0 50px #04709E, 0 0 150px #FFF;
-	-webkit-box-shadow:           0 0 50px #04709E, 0 0 150px #FFF;
-	*/
-
-	/*
-	box-shadow:                   0 0 50px #04709E, 0 0 150px #FFF, 0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
-	-moz-box-shadow:              0 0 50px #04709E, 0 0 150px #FFF, 0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
-	-webkit-box-shadow:           0 0 50px #04709E, 0 0 150px #FFF, 0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
-	*/
-	
 	position:                     absolute;
 	top:                          0;
 	margin:                       15.2em 0;
 	left:                         50%;
-  	transform:                    translateX(-50%);
+	transform:                    translateX(-50%);
 }
