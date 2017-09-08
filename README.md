@@ -1,3 +1,5 @@
+<link rel="shortcut icon" type="image/x-icon" href="https://nulldev.org/img/nl.png" />
+
 ## CSS Playground
 
 **A repository to test my CSS skills**
