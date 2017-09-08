@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* * * * * * * * * * * * * * * * 
+ * Copyright (c) 2017 NullDev. *
+ * * * * * * * * * * * * * * * */
+
+* {
+	overflow:                     hidden;
+	font-family:                  'Raleway', sans-serif;
+}
+
+*, :before, :after {
+	-moz-box-sizing:              border-box;
+	-webkit-box-sizing:           border-box;
+	box-sizing:                   border-box;
+}
+
+html, body { 
+	margin:                       0;
+	padding-left:                 0;
+	height:                       100%;
+	width:                        100%;
+}
+
+body { 
+	background:                    #73C8A9;
+	background:                   -webkit-linear-gradient(to right, #373B44, #73C8A9);
+	background:                   linear-gradient(to right, #373B44, #73C8A9);
+	width:                        100%;
+	height:                       100%;
+}
+
+.title {
+	position:                     absolute; 
+	left:                         0; 
+	right:                        0; 
+	margin-left:                  auto; 
+	margin-right:                 auto; 
+	width:                        500px;
+	color:                        #FFF;
+	text-align:                   center;
+}
+
+.title p {
+	font-size:                    35px;
+	background:                   -webkit-linear-gradient(#5EFFDC, #FFF);
+	-webkit-background-clip:      text;
+	-webkit-text-fill-color:      transparent;
+}
+
+.title a {
+	color:                        #000;
+	font-style:                   normal;
+	text-decoration:              none;
+}
+
+.wrap:hover { animation-play-state: paused; }
+.wrap:hover .break {
+	opacity:                      1;
+	transform:                    none;
+}
+
+.wrap {
+	background:                   #070000;
+	background:                   -webkit-linear-gradient(to bottom, #070000, #4C0001, #070000);
+	background:                   linear-gradient(to bottom, #070000, #4C0001, #070000);
+	background-size:              98% auto;
+	animation:                    5s anim infinite linear;
+	-webkit-animation:            5s anim infinite linear;
+	-moz-animation:               5s anim infinite linear;
+	-o-animation:                 5s anim infinite linear;
+	-ms-animation:                5s anim infinite linear;
+	border:                       2em solid #000;
+	width:                        40em;
+	height:                       30em;
+	position:                     absolute;
+	margin:                       15.2em 0;
+	left:                         50%;
+	transform:                    translateX(-50%);
+}
+
+.break {
+	position:                     absolute;
+	text-align:                   center;
+	right:                        4em;
+	bottom:                       4em;
+	left:                         4em;
+	line-height:                  6.75em;
+	background:                   rgba(0, 0, 0, 0.5);
+	color:                        #FFF;
+	font-size:                    2em;
+	opacity:                      0;
+}
+
+@-webkit-keyframes anim { 100%{   background-position: 0px -3000px; } }
+@-moz-keyframes anim    { 100%{   background-position: 0px -3000px; } }
+@-o-keyframes anim      { 100%{   background-position: 0px -3000px; } }
+@-ms-keyframes anim     { 100%{   background-position: 0px -3000px; } }
+@keyframes anim         { 100%{   background-position: 0px -3000px; } }
