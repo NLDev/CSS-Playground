@@ -13,3 +13,4 @@ For a prettier list go here: <br>
 | Name | Description | Live Version | Code |
 |----------|-----------------|------------------|----------|
 | Earth | A pure CSS Earth. I saw the post <a target="_blank" href="https://www.facebook.com/ProgrammersCreateLife/photos/a.241809332534619.55240.241806149201604/1458446667537540/?type=3&theater">here</a> and thought imma try. | <a target="_blank" href="https://nldev.github.io/CSS-Playground/earth/">Click Me</a> | <a target="_blank" href="https://github.com/NLDev/CSS-Playground/tree/master/earth">Click Me</a> |
+| Hover Interrupt | Triggers a Keyframe event on hover | <a target="_blank" href="https://nldev.github.io/CSS-Playground/hover_interrupt/">Click Me</a> | <a target="_blank" href="https://github.com/NLDev/CSS-Playground/tree/master/hover_interrupt">Click Me</a> |
