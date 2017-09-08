@@ -85,7 +85,10 @@ body {
 	margin-left:                  -21em;
 	margin-top:                   -7em;
 	width:                        800px;
-	background-color:             green;
+	background:                   #F79D00; 
+	background:                   -webkit-linear-gradient(to right, green, #F79D00);
+	background:                   linear-gradient(to right, green, #F79D00); 
+
 	-webkit-clip-path: polygon(
 		383px 34px,  357px 45px,  341px 33px,  295px 56px,
 		333px 55px,  359px 77px,  339px 109px, 358px 128px,
@@ -139,9 +142,9 @@ body {
 	-ms-border-radius:            50%;
 	-o-border-radius:             50%;
 	z-index:                      2;
-	box-shadow:                   40px -40px 80px -5px rgba(0,0,0,.9) inset;
-	-moz-box-shadow:              40px -40px 80px -5px rgba(0,0,0,.9) inset;
-	-webkit-box-shadow:           40px -40px 80px -5px rgba(0,0,0,.9) inset;
+	box-shadow:                   40px -40px 80px -5px rgba(0, 0, 0, .9) inset;
+	-moz-box-shadow:              40px -40px 80px -5px rgba(0, 0, 0, .9) inset;
+	-webkit-box-shadow:           40px -40px 80px -5px rgba(0, 0, 0, .9) inset;
 }
 
 .shine {
