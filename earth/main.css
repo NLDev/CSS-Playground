@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-/* * * * * * * * * * * * * * * * * * 
- * Copyright (c) 2016-2017 NullDev *
- * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * 
+ * Copyright (c) 2017 NullDev. *
+ * * * * * * * * * * * * * * * */
 
 * {
 	overflow:                     hidden;
@@ -139,25 +139,9 @@ body {
 	-ms-border-radius:            50%;
 	-o-border-radius:             50%;
 	z-index:                      2;
-	box-shadow:                   -40px 15px 40px 10px rgba(0,0,0,.9) inset;
-	-moz-box-shadow:              -40px 15px 40px 10px rgba(0,0,0,.9) inset;
-	-webkit-box-shadow:           -40px 15px 40px 10px rgba(0,0,0,.9) inset;
-}
-
-.earth:after {
-	content:                      "";
-	position:                     absolute;
-	top:                          0;
-	left:                         0;
-	width:                        100%;
-	height:                       100%;
-	border-radius:                50%;
-	-moz-border-radius:           50%;
-	-webkit-border-radius:        50%;
-	-ms-border-radius:            50%;
-	-o-border-radius:             50%;
-	opacity:                      0.2;
-	background:                   radial-gradient(circle at 100px 100px, #FFF, #000);
+	box-shadow:                   40px -40px 80px -5px rgba(0,0,0,.9) inset;
+	-moz-box-shadow:              40px -40px 80px -5px rgba(0,0,0,.9) inset;
+	-webkit-box-shadow:           40px -40px 80px -5px rgba(0,0,0,.9) inset;
 }
 
 .shine {
@@ -166,25 +150,25 @@ body {
 	width:                        300px;
 	border-radius:                100%;
 
-	/*
-	box-shadow:                   0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
-	-moz-box-shadow:              0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
-	-webkit-box-shadow:           0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
-	*/
-
+	box-shadow:                   0 0 10px #04709E, 20px -15px 40px -5px #8acdea;
+	-moz-box-shadow:              0 0 10px #04709E, 20px -15px 40px -5px #8acdea;
+	-webkit-box-shadow:           0 0 10px #04709E, 20px -15px 40px -5px #8acdea;
+	
 	/*
 	box-shadow:                   0 0 50px #04709E, 0 0 150px #FFF;
 	-moz-box-shadow:              0 0 50px #04709E, 0 0 150px #FFF;
 	-webkit-box-shadow:           0 0 50px #04709E, 0 0 150px #FFF;
 	*/
 
+	/*
 	box-shadow:                   0 0 50px #04709E, 0 0 150px #FFF, 0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
 	-moz-box-shadow:              0 0 50px #04709E, 0 0 150px #FFF, 0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
 	-webkit-box-shadow:           0 0 50px #04709E, 0 0 150px #FFF, 0 -10px 15px -1px #FFF, inset 0 3px 40px -1px #04709E;
-
+	*/
+	
 	position:                     absolute;
 	top:                          0;
-	margin:                       15em 0;
+	margin:                       15.2em 0;
 	left:                         50%;
   	transform:                    translateX(-50%);
 }
