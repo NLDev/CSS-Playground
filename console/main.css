@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+/* * * * * * * * * * * * * * * * 
+ * Copyright (c) 2017 NullDev. *
+ * * * * * * * * * * * * * * * */
+
+*, html, body { font-family:      'Source Code Pro', monospace; }
+
+body {
+	background-color:             black;
+	text-align:                   middle;
+}
+
+.chr { width: 65%; }
+
+input.nullblock {
+	margin:                       0;
+	padding:                      0;
+	background:                   #424242;
+	color:                        #FFF;
+	width:                        100%;
+	position:                     absolute;
+}
+
+.contain { overflow:              auto; }
+
+.info {
+	display:                      flex;
+	justify-content:              center;
+	text-align:                   left;
+}
+
+#nullscroller {
+	position:                     relative; 
+	text-align:                   left; 
+	display:                      flex; 
+	justify-content:              left; 
+	background-color:             #424242; 
+	align-items:                  top; 
+	overflow-y:                   auto; 
+	height:                       400px; 
+	width:                        968px;
+}
+
+#CON_OUT {
+	padding-left:                 10px; 
+	position:                     absolute; 
+	top:                          10px; 
+	display:                      table-cell; 
+	vertical-align:               top; 
+	text-align:                   left;
+}
+
+#CON_IN {
+	position:                     absolute; 
+	padding-left:                 10px; 
+	bottom:                       0px; 
+	display:                      table-cell; 
+	text-align:                   left;
+}
+
+.in_wrap {
+	position:                     relative; 
+	text-align:                   left; 
+	display:                      flex; 
+	justify-content:              left; 
+	background-color:             #333; 
+	height:                       50px; 
+	width:                        968px;
+}
+
+#inputlinemail { margin:          auto; }
+
+.nullblock {
+	display:                      inline; 
+	border:                       none; 
+	font-size:                    20px;
+}
