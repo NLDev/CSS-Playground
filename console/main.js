@@ -2,23 +2,20 @@ var nullhistory = []; //log
 var index = 0;
 var aptprg = "";
 var dir = "/";
-var ccode = "FFFFFF"
+var ccode = "FFF"
 var lastinput = "";
 var link = "";
 var e = document.getElementById("nullin").onkeydown = function(e){
-	if(e.keyCode == 13){
+	if (e.keyCode == 13){
 		var input = document.getElementById("nullin").value.toLowerCase();
-		if(input == "" || input == null) return false;
+		if (input == "" || input == null) return false;
 		if (input != lastinput){
 			nullhistory.unshift(input);
 			if (nullhistory.length > 10) nullhistory.splice(nullhistory.length - 1, 1);
 		}
 		lastinput = input;
-		if(input.match(/^\s*$/)){ /* REGEX for whitespace */
-			nullprint("&gt; ### ERROR ###<br><br>&gt; Please enter a command.<br><br>");
-			return false;
-		}
-		else if(input.replace(/\s/g, "")  == "help"){
+		if (input.match(/^\s*$/)) nullprint("&gt; ### ERROR ###<br><br>&gt; Please enter a command.<br><br>");
+		else if (input.replace(/\s/g, "")  == "help"){
 			nullprint(
 				"user@nulldev:~ $ help<br><br>" +
 				"&gt; ### HELP ###<br>" +
@@ -38,43 +35,37 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				"<br>&gt; <font color=\"#99ff93\">delcmd</font>: Deletes command history \(Arrow-Up / Arrow-Down\)." +
 				"<br><br>"
 			);
-			return false;
 		}
-		else if(input.replace(/\s/g, "").indexOf('apt-get') >= 0){
-			if(input.replace(/\s/g, "")  == "apt-get" || input  == "apt-get help") nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Usage: apt-get [program name]<br><br>");
+		else if (input.replace(/\s/g, "").indexOf('apt-get') >= 0){
+			if (input.replace(/\s/g, "")  == "apt-get" || input  == "apt-get help") nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Usage: apt-get [program name]<br><br>");
 			else {
 				aptprg = input.replace('apt-get', '').replace(/\s/g, "");
-				if(aptprg.replace(/\s/g, "") == "prg1"){
+				if (aptprg.replace(/\s/g, "") == "prg1"){
 					nullprint("user@nulldev:~ $ apt-get --quiet " + aptprg.replace(/\s/g, "") + "<br><br>&gt; Getting '" + aptprg.replace(/\s/g, "") + "'...<br>");
 					nullprint("&gt; Done!<br><br>");
 				}
-				else if(aptprg.replace(/\s/g, "") == "prg2"){
+				else if (aptprg.replace(/\s/g, "") == "prg2"){
 					nullprint("user@nulldev:~ $ apt-get --quiet " + aptprg.replace(/\s/g, "") + "<br><br>&gt; Getting '" + aptprg.replace(/\s/g, "") + "'...<br>");
 					nullprint("&gt; Done!<br><br>");
 				}
-				else if(aptprg.replace(/\s/g, "") == "prg3"){
+				else if (aptprg.replace(/\s/g, "") == "prg3"){
 					nullprint("user@nulldev:~ $ apt-get --quiet " + aptprg.replace(/\s/g, "") + "<br><br>&gt; Getting '" + aptprg.replace(/\s/g, "") + "'...<br>");
 					nullprint("&gt; Done!<br><br>");
 				}
 				else nullprint("user@nulldev:~ $ apt-get --quiet " + aptprg.replace(/\s/g, "") + "<br><br>&gt; Error: Package '" + aptprg.replace(/\s/g, "") + "' not found.<br><br>");
 			}
-			return false;
 		}
-		else if(input.replace(/\s/g, "").indexOf('open') >= 0){
-			if(input.replace(/\s/g, "")  == "open" || input  == "open help") nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Usage: open [url] (With or without \"http://\")<br><br>");
-			else{
+		else if (input.replace(/\s/g, "").indexOf('open') >= 0){
+			if (input.replace(/\s/g, "")  == "open" || input  == "open help") nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Usage: open [url] (With or without \"http://\")<br><br>");
+			else {
 				link = input.replace('open', '').replace(/\s/g, "");
 				nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Opening " + link + "...<br><br>");
-				if(input.replace(/\s/g, "").indexOf('http://') >= 0) window.location = link;
+				if (input.replace(/\s/g, "").indexOf('http://') >= 0) window.location = link;
 				else window.location = "http://" + link;
 			}
-			return false;
 		}
-		else if(input.replace(/\s/g, "")  == "ls"){
-			if(dir == "/") nullprint("user@nulldev:~ $ " + input + " -a -i --no-group<br><br>&gt; ../<br>&gt; /apps/<br>&gt; /programs/<br>&gt; /bukkit/<br>&gt; /conhost/<br><br>");
-			return false;
-		}
-		else if(input.replace(/\s/g, "")  == "github"){
+		else if (input.replace(/\s/g, "")  == "ls") if(dir == "/") nullprint("user@nulldev:~ $ " + input + " -a -i --no-group<br><br>&gt; ../<br>&gt; /apps/<br>&gt; /programs/<br>&gt; /bukkit/<br>&gt; /conhost/<br><br>");
+		else if (input.replace(/\s/g, "")  == "github"){
 			nullprint(
 				"user@nulldev:~ $ " + input + "<br><br>" +
 				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMM.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.MMM<br>" +
@@ -100,58 +91,34 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:~==~==~==~==~~<br><br>" +
 				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Klick <a href=\"http://github.com/NLDev\" target=\"_blank\"><font color=\"#99ff93\"><u>here</u></font></a> for my <font color=\"#ef8686\">GitHub</font>!<br><br>"
 			);
-			return false;
 		}
-		if(input.replace(/\s/g, "").indexOf('echo') >= 0){
+		if (input.replace(/\s/g, "").indexOf('echo') >= 0){
 			echo = input.replace('echo', '').replace(/\s/g, "");
 			nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; " + echo + "<br><br>");
-			return false;
 		}
-		else if(input.replace(/\s/g, "").indexOf('color') >= 0){
-			if(input.replace(/\s/g, "")  == "color" || input  == "color help") nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Usage: color [color code] <br>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color reset : resets the color.<br><br>&gt; Only HTML color codes without '#'. Default = FFFFFF \[white\].<br>&gt; Example: color 00FF00<br><br>");
-			else if(input  == "color reset"){
+		else if (input.replace(/\s/g, "").indexOf('color') >= 0){
+			if (input.replace(/\s/g, "")  == "color" || input  == "color help") nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Usage: color [color code] <br>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color reset : resets the color.<br><br>&gt; Only HTML color codes without '#'. Default = FFFFFF \[white\].<br>&gt; Example: color 00FF00<br><br>");
+			else if (input  == "color reset"){
 				nullprint("user@nulldev:~ $ " + input + "<br><br>");
 				document.getElementById("nullapend").style.color = "#FFFFFF"
 				document.getElementById("nullin").value = "";
 			}
-			else{
+			else {
 				ccode = input.replace('color', '').replace(/\s/g, "");
 				nullprint("user@nulldev:~ $ " + input + "<br>user@nulldev:~ $ export PS1=\"\\e\[" + ccode + "m[\\u@\\h \\W]\\$ \\e\[m\"<br><br>");
 				document.getElementById("nullapend").style.color = "#" + ccode;
 				document.getElementById("nullin").value = "";
 			}
-			return false;
 		}
-		else if(input.replace(/\s/g, "")  == "cls" || input.replace(/\s/g, "")  == "clear"){
+		else if (input.replace(/\s/g, "")  == "cls" || input.replace(/\s/g, "")  == "clear"){
 			document.getElementById('nullapend').innerHTML = "<br>&gt; ### CONSOLE CLEARED ###<br><br>"
-			document.getElementById("nullin").value = ""; //Don't forget to clear the input (We don't use nullprint!)
-			return false;
+			document.getElementById("nullin").value = ""; 
 		}
-		else if(input.replace(/\s/g, "").indexOf('hack') >= 0){
-			document.getElementById("nullin").value = "";
-			nullprint("Hacking NSA Server...<br><br>");
-			nullprint("Done!<br><br>");
-			nullprint("USE NSA HACK;<br>Hacking 127.0.0.1<br><br>");
-			nullprint("Done!<br><br>");
-			nullprint("Decrypting Matrix...<br><br>");
-			nullprint(
-				"01110111 01101000 01111001 00100000<br>" +
-				"01100001 01110010 01100101 00100000<br>" +
-				"01111001 01101111 01110101 00100000<br>" +
-				"01100101 01110110 01100101 01101110<br>" +
-				"00100000 01100100 01101111 01101001<br>" +
-				"01101110 01100111 00100000 01110100<br>" +
-				"01101000 01100001 01110100 00111111<br><br>"
-			);
-			nullprint("Done!<br>Enable Firewall...<br><br>");
-			return false;
-		}
-		else if(input.replace(/\s/g, "")  == "delcmd"){
+		else if (input.replace(/\s/g, "")  == "delcmd"){
 			nullprint("user@nulldev:~ $ delcmd<br><br>&gt; ### COMMAND HISTORY CLEARED ###<br><br>");
 			nullhistory = [];
-			return false;
 		}
-		else if(input.replace(/\s/g, "")  == "lsprog"){
+		else if (input.replace(/\s/g, "")  == "lsprog"){
 			nullprint(
 				"user@nulldev:~ $ lsprog -a -i --no-group <br><br>&gt; ### PACKAGES ###<br><br>" +
 				"&gt; <u>" +
@@ -160,9 +127,8 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				"&gt; 02 | 10.10.2016 | &lt;WINDOWS&gt; | .zip/.exe | prg2 |<br>" +
 				"&gt; 01 | 10.10.2016 | &lt;BUKKIT&gt;&nbsp; | .zip/.jar | prg3 |<br><br>"
 			);
-			return false;
 		}
-		else if(input.replace(/\s/g, "")  == "about"){
+		else if (input.replace(/\s/g, "")  == "about"){
 			nullprint(
 				"user@nulldev:~ $ about<br><br>" +
 				"&gt; ### ABOUT <font color=\"#99ff93\">NullOS</font> ###<br><br>" +
@@ -171,27 +137,17 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				"&gt; this was a great exercise. Click <a href=\"https://github.com/NLDev/CSS-Playground/tree/master/console\" target=\"_blank\"><font color=\"#99ff93\"><u>here</u></font></a> for the GitHub link of this script or<br>" +
 				"&gt; type '<font color=\"#99ff93\">github</font>' for my GitHub account!<br><br>"
 			);
-			return false;
 		}
-		else if(input.replace(/\s/g, "")  == "reload"){
+		else if (input.replace(/\s/g, "")  == "reload"){
 			nullprint("user@nulldev:~ $ reload<br><br>&gt; ### RELOADING... ###<br><br>");
 			location.reload();
-			return false;
 		}
-		else if(input.replace(/\s/g, "")  == "pwd"){
-			nullprint("user@nulldev:~ $ pwd<br><br>&gt; " + dir + "<br><br>");
-			return false;
-		}
-		else if(input.replace(/\s/g, "")  == "quit" || input.replace(/\s/g, "")  == "exit"){
+		else if (input.replace(/\s/g, "")  == "pwd") nullprint("user@nulldev:~ $ pwd<br><br>&gt; " + dir + "<br><br>");
+		else if (input.replace(/\s/g, "")  == "quit" || input.replace(/\s/g, "")  == "exit"){
 			nullprint("user@nulldev:~ $ quit<br><br>&gt; ### QUITTING... ###<br><br>");
 			window.location = "https://github.com/NLDev";
-			return false;
 		}
-		else{
-			nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Command '" + input + "' not found. Please use '<font color=\"#99ff93\">help</font>' for a list of aviable commands.<br><br>");
-			return false;
-		}
-		return false;
+		else nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Command '" + input + "' not found. Please use '<font color=\"#99ff93\">help</font>' for a list of aviable commands.<br><br>");
 	}
 	else if(e.keyCode == 38){
 		if(index < nullhistory.length){
