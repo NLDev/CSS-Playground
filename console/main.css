@@ -11,6 +11,23 @@ body {
 	text-align:                   middle;
 }
 
+body { 
+  -webkit-text-size-adjust:       none;
+  -ms-text-size-adjust:           none;
+  -ms-overflow-style:             scrollbar;
+}
+
+hr { 
+    border-right :                0;
+    border-left:                  0;
+}
+
+*, :before, :after {
+  -moz-box-sizing:                border-box;
+  -webkit-box-sizing:             border-box;
+  box-sizing:                     border-box;
+}
+
 .chr { width: 65%; }
 
 input.nullblock {
