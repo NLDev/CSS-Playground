@@ -8,13 +8,12 @@ var link = "";
 var e = document.getElementById("nullin").onkeydown = function(e){
 	if (e.keyCode == 13){
 		var input = document.getElementById("nullin").value.toLowerCase();
-		if (input == "" || input == null) return false;
 		if (input != lastinput){
 			nullhistory.unshift(input);
 			if (nullhistory.length > 10) nullhistory.splice(nullhistory.length - 1, 1);
 		}
 		lastinput = input;
-		if (input.match(/^\s*$/)) nullprint("&gt; ### ERROR ###<br><br>&gt; Please enter a command.<br><br>");
+		if (input.match(/^\s*$/) || input == "" || input == null) nullprint("user@nulldev:~ $ <br>");
 		else if (input.replace(/\s/g, "")  == "help"){
 			nullprint(
 				"user@nulldev:~ $ help<br><br>" +
@@ -54,6 +53,7 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				}
 				else nullprint("user@nulldev:~ $ apt-get --quiet " + aptprg.replace(/\s/g, "") + "<br><br>&gt; Error: Package '" + aptprg.replace(/\s/g, "") + "' not found.<br><br>");
 			}
+			return false;
 		}
 		else if (input.replace(/\s/g, "").indexOf('open') >= 0){
 			if (input.replace(/\s/g, "")  == "open" || input  == "open help") nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Usage: open [url] (With or without \"http://\")<br><br>");
@@ -63,8 +63,12 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				if (input.replace(/\s/g, "").indexOf('http://') >= 0) window.location = link;
 				else window.location = "http://" + link;
 			}
+			return false;
 		}
-		else if (input.replace(/\s/g, "")  == "ls") if(dir == "/") nullprint("user@nulldev:~ $ " + input + " -a -i --no-group<br><br>&gt; ../<br>&gt; /apps/<br>&gt; /programs/<br>&gt; /bukkit/<br>&gt; /conhost/<br><br>");
+		else if (input.replace(/\s/g, "")  == "ls"){
+			if (dir == "/") nullprint("user@nulldev:~ $ " + input + " -a -i --no-group<br><br>&gt; ../<br>&gt; /apps/<br>&gt; /programs/<br>&gt; /bukkit/<br>&gt; /conhost/<br><br>");
+			return false;
+		}
 		else if (input.replace(/\s/g, "")  == "github"){
 			nullprint(
 				"user@nulldev:~ $ " + input + "<br><br>" +
@@ -91,10 +95,12 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:~==~==~==~==~~<br><br>" +
 				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Klick <a href=\"http://github.com/NLDev\" target=\"_blank\"><font color=\"#99ff93\"><u>here</u></font></a> for my <font color=\"#ef8686\">GitHub</font>!<br><br>"
 			);
+			return false;
 		}
-		if (input.replace(/\s/g, "").indexOf('echo') >= 0){
+		else if (input.replace(/\s/g, "").indexOf('echo') >= 0){
 			echo = input.replace('echo', '').replace(/\s/g, "");
 			nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; " + echo + "<br><br>");
+			return false;
 		}
 		else if (input.replace(/\s/g, "").indexOf('color') >= 0){
 			if (input.replace(/\s/g, "")  == "color" || input  == "color help") nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Usage: color [color code] <br>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color reset : resets the color.<br><br>&gt; Only HTML color codes without '#'. Default = FFFFFF \[white\].<br>&gt; Example: color 00FF00<br><br>");
@@ -109,14 +115,17 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				document.getElementById("nullapend").style.color = "#" + ccode;
 				document.getElementById("nullin").value = "";
 			}
+			return false;
 		}
 		else if (input.replace(/\s/g, "")  == "cls" || input.replace(/\s/g, "")  == "clear"){
 			document.getElementById('nullapend').innerHTML = "<br>&gt; ### CONSOLE CLEARED ###<br><br>"
 			document.getElementById("nullin").value = ""; 
+			return false;
 		}
 		else if (input.replace(/\s/g, "")  == "delcmd"){
 			nullprint("user@nulldev:~ $ delcmd<br><br>&gt; ### COMMAND HISTORY CLEARED ###<br><br>");
 			nullhistory = [];
+			return false;
 		}
 		else if (input.replace(/\s/g, "")  == "lsprog"){
 			nullprint(
@@ -127,6 +136,7 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				"&gt; 02 | 10.10.2016 | &lt;WINDOWS&gt; | .zip/.exe | prg2 |<br>" +
 				"&gt; 01 | 10.10.2016 | &lt;BUKKIT&gt;&nbsp; | .zip/.jar | prg3 |<br><br>"
 			);
+			return false;
 		}
 		else if (input.replace(/\s/g, "")  == "about"){
 			nullprint(
@@ -137,34 +147,44 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				"&gt; this was a great exercise. Click <a href=\"https://github.com/NLDev/CSS-Playground/tree/master/console\" target=\"_blank\"><font color=\"#99ff93\"><u>here</u></font></a> for the GitHub link of this script or<br>" +
 				"&gt; type '<font color=\"#99ff93\">github</font>' for my GitHub account!<br><br>"
 			);
+			return false;
 		}
 		else if (input.replace(/\s/g, "")  == "reload"){
 			nullprint("user@nulldev:~ $ reload<br><br>&gt; ### RELOADING... ###<br><br>");
 			location.reload();
+			return false;
 		}
-		else if (input.replace(/\s/g, "")  == "pwd") nullprint("user@nulldev:~ $ pwd<br><br>&gt; " + dir + "<br><br>");
+		else if (input.replace(/\s/g, "")  == "pwd"){
+			nullprint("user@nulldev:~ $ pwd<br><br>&gt; " + dir + "<br><br>");
+			return false;
+		}
 		else if (input.replace(/\s/g, "")  == "quit" || input.replace(/\s/g, "")  == "exit"){
 			nullprint("user@nulldev:~ $ quit<br><br>&gt; ### QUITTING... ###<br><br>");
 			window.location = "https://github.com/NLDev";
+			return false;
 		}
-		else nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Command '" + input + "' not found. Please use '<font color=\"#99ff93\">help</font>' for a list of aviable commands.<br><br>");
+		else {
+			nullprint("user@nulldev:~ $ " + input + "<br><br>&gt; Command '" + input + "' not found. Please use '<font color=\"#99ff93\">help</font>' for a list of aviable commands.<br><br>");
+			return false;
+		}
+		return false;
 	}
-	else if(e.keyCode == 38){
-		if(index < nullhistory.length){
+	else if (e.keyCode == 38){
+		if (index < nullhistory.length){
 			document.getElementById("nullin").value = nullhistory[index];
 			this.selectionStart = this.selectionEnd = this.value.length;
 			index++;
 		}
-		if(index == 0) return false;
-		if(index == nullhistory.length) index--;
+		if (index == 0) return false;
+		if (index == nullhistory.length) index--;
 	}
-	else if(e.keyCode == 40) {
+	else if (e.keyCode == 40) {
 		if (index > 0){
 			index--;
 			document.getElementById("nullin").value = nullhistory[index];
 			this.selectionStart = this.selectionEnd = this.value.length;
 		}
-		else if(index == 0) document.getElementById("nullin").value = "";
+		else if (index == 0) document.getElementById("nullin").value = "";
 	}
 };
 
