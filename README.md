@@ -19,3 +19,8 @@ For a prettier list go here: <br>
 | New Server | Website to tell people the website is in development | <a target="_blank" href="https://nldev.github.io/CSS-Playground/new_server/">Click Me</a> | <a target="_blank" href="https://github.com/NLDev/CSS-Playground/tree/master/new_server">Click Me</a> |
 | Console | A web (fake) terminal test. (Was one of my first websites ever. The code is messy!) | <a target="_blank" href="https://nldev.github.io/CSS-Playground/console/">Click Me</a> | <a target="_blank" href="https://github.com/NLDev/CSS-Playground/tree/master/console">Click Me</a> |
 | Depressed 404 | Just a depressed webserver serving an Error 404. | <a target="_blank" href="https://nldev.github.io/CSS-Playground/depressed_404/">Click Me</a> | <a target="_blank" href="https://github.com/NLDev/CSS-Playground/tree/master/depressed_404">Click Me</a> |
+
+## Contributing
+
+Feel free to help me improve my skills by pointing out mistakes or bad practise. <br>
+Just open an [issue](https://github.com/NLDev/CSS-Playground/issues) or a [pull request](https://github.com/NLDev/CSS-Playground/pulls). :smile:
