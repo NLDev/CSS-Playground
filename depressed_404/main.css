@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+/* * * * * * * * * * * * * * * * 
+ * Copyright (c) 2017 NullDev. *
+ * * * * * * * * * * * * * * * */
+
+.text {
+	float: left;
+	margin: 0 auto;
+}
+
+body {
+	font-family: 'Source Code Pro', monospace;
+	background-color: #555;
+	overflow: hidden;
+}
+
+.window {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 450px;
+	height: 250px;
+	background-color: rgba(37, 37, 37, 0.85);
+	border: 1px solid #c9c9c9;
+	box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all ease-in-out 0.3s;
+	transition: all ease-in-out 0.3s;
+}
+
+.window-header {
+	background-color: #eee;
+	height: 25px;
+}
+
+.window-controls {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 100%;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.window-controls .control-item {
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	color: #333;
+	-webkit-transition: all ease-in 0.15s;
+	transition: all ease-in 0.15s;
+	cursor: pointer;
+}
+
+.window-controls .control-item:hover { background-color: #CCC; }
+
+.control-item.control-close {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 28px;
+}
+
+.control-item.control-close:hover {	
+	background-color: #ec6060; 
+	color: #FFF; 
+}
+
+.control-item.control-maximize { line-height: 19px; }
+.control-item.control-minimize { line-height: 22px; }
+
+.window-cursor {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 5px;
+}
+
+#txt_story { 
+	color: #FFF;
+    position: absolute;
+    width: 443px;
+    margin-top: -5px;
+    margin-left: 0;
+    height: 223px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+
+}
+
+@media (max-width: 767px) {
+	.window    { width: 300px; }
+	#txt_story { width: 293px; }
+}
