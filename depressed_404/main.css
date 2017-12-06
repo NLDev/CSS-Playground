@@ -70,6 +70,7 @@ body {
 .control-item.control-close:hover {	
 	background-color: #ec6060; 
 	color: #FFF; 
+	margin-bottom: 4px;
 }
 
 .control-item.control-maximize { line-height: 19px; }
@@ -84,14 +85,13 @@ body {
 
 #txt_story { 
 	color: #FFF;
-    position: absolute;
-    width: 443px;
-    margin-top: -5px;
-    margin-left: 0;
-    height: 223px;
-    overflow-x: hidden;
-    overflow-y: auto; 
-
+	position: absolute;
+	width: 443px;
+	margin-top: -5px;
+	margin-left: 0;
+	height: 223px;
+	overflow-x: hidden;
+	overflow-y: auto; 
 }
 
 @media (max-width: 767px) {
