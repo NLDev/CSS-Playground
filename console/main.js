@@ -93,7 +93,7 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~~~==~==~~~==~==~~~~~~<br>" +
 				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~~~==~==~==~==~~~~~~<br>" +
 				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:~==~==~==~==~~<br><br>" +
-				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Klick <a href=\"http://github.com/NLDev\" target=\"_blank\"><font color=\"#99ff93\"><u>here</u></font></a> for my <font color=\"#ef8686\">GitHub</font>!<br><br>"
+				"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Klick <a href=\"http://github.com/NullDev\" target=\"_blank\"><font color=\"#99ff93\"><u>here</u></font></a> for my <font color=\"#ef8686\">GitHub</font>!<br><br>"
 			);
 			return false;
 		}
@@ -144,7 +144,7 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 				"&gt; ### ABOUT <font color=\"#99ff93\">NullOS</font> ###<br><br>" +
 				"&gt; NullOS was a simple JavaScript project for implemenmting a command<br>" +
 				"&gt; prompt on a website. I wanted to learn JavaScript anyway and<br>" +
-				"&gt; this was a great exercise. Click <a href=\"https://github.com/NLDev/CSS-Playground/tree/master/console\" target=\"_blank\"><font color=\"#99ff93\"><u>here</u></font></a> for the GitHub link of this script or<br>" +
+				"&gt; this was a great exercise. Click <a href=\"https://github.com/NullDev/CSS-Playground/tree/master/console\" target=\"_blank\"><font color=\"#99ff93\"><u>here</u></font></a> for the GitHub link of this script or<br>" +
 				"&gt; type '<font color=\"#99ff93\">github</font>' for my GitHub account!<br><br>"
 			);
 			return false;
@@ -160,7 +160,7 @@ var e = document.getElementById("nullin").onkeydown = function(e){
 		}
 		else if (input.replace(/\s/g, "")  == "quit" || input.replace(/\s/g, "")  == "exit"){
 			nullprint("user@nulldev:~ $ quit<br><br>&gt; ### QUITTING... ###<br><br>");
-			window.location = "https://github.com/NLDev";
+			window.location = "https://github.com/NullDev";
 			return false;
 		}
 		else {
